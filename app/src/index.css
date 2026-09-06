@@ -1,0 +1,122 @@
+/* =============================================
+   NetraX – Premium Prototype Stylesheet + React Additions (Light Theme)
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-dark: #F8FAFC;
+  --bg-surface: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.1);
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --blue: #2563EB;
+  --blue-glow: rgba(37, 99, 235, 0.2);
+  --cyan: #0891B2;
+  --green: #16A34A;
+  --yellow: #D97706;
+  --orange: #EA580C;
+  --red: #DC2626;
+  --gradient-1: linear-gradient(135deg, #2563EB, #0891B2);
+  --gradient-2: linear-gradient(135deg, #7C3AED, #DB2777);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Base Styles */
+.navbar {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+.nav-brand { display: flex; align-items: center; gap: 0.5rem; }
+.logo-icon { font-size: 1.5rem; color: var(--blue); }
+.logo-text { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
+.logo-highlight { color: var(--cyan); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links li { color: var(--text-secondary); font-weight: 500;}
+
+.hero {
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block; padding: 0.4rem 1.2rem;
+  background: rgba(217, 119, 6, 0.1); border: 1px solid rgba(217, 119, 6, 0.2);
+  border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--yellow);
+  margin-bottom: 1.5rem;
+}
+.hero-title { font-size: 3.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.2rem; }
+.text-gradient {
+  background: var(--gradient-1); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-subtitle { font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto; }
+
+/* Dashboard Cards */
+.dashboard-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+}
+.dash-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.dash-map { grid-column: 1 / -1; }
+.dash-card-header { display: flex; justify-content: space-between; align-items: center; }
+.dash-card-header h4 { font-size: 1rem; font-weight: 600; }
+.dash-live-badge { font-size: 0.75rem; font-weight: 600; color: var(--green); animation: pulse-text 2s ease-in-out infinite; }
+
+@keyframes pulse-text { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.alerts-list, .delivery-list { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;}
+.alert-item, .delivery-item {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  padding: 0.8rem; border-radius: var(--radius-sm);
+  background: #F8FAFC; border: 1px solid var(--border);
+}
+.alert-item.critical { border-left: 4px solid var(--red); }
+.alert-item.warning { border-left: 4px solid var(--yellow); }
+.alert-item.normal, .alert-item.watch { border-left: 4px solid var(--blue); }
+
+.delivery-status {
+  font-size: 0.68rem; font-weight: 700; padding: 0.3rem 0.6rem;
+  border-radius: 4px; white-space: nowrap; text-transform: uppercase;
+}
+.delivery-status.on-time { background: rgba(22, 163, 74, 0.15); color: var(--green); }
+.delivery-status.delayed { background: rgba(217, 119, 6, 0.15); color: var(--yellow); }
+
+.alert-info strong, .delivery-info strong { display: block; font-size: 0.88rem; font-weight: 600; }
+.alert-info span, .delivery-info span { display: block; font-size: 0.78rem; color: var(--text-muted); }
+
+/* Driver View specific styles */
+.btn-outline {
+  display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--border);
+  color: var(--text-primary); text-decoration: none; border-radius: 50px;
+}
+.btn-massive {
+  display: block; width: 100%; padding: 1.5rem; text-align: center;
+  background: var(--gradient-1); border: none; border-radius: 12px;
+  color: #fff; font-size: 1.8rem; font-weight: 800; text-decoration: none;
+  box-shadow: 0 8px 32px var(--blue-glow); transition: transform 0.2s;
+}
+.btn-massive:active { transform: scale(0.98); }

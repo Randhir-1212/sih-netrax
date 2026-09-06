@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetraX – AI Disruption Forecasting Platform</title>
+  <meta name="description" content="NetraX: 72-Hour Predictive Disruption Forecasting for Northeast India. Landslide, Flood, Traffic & Route Optimization." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="logo-icon">◉</span>
+      <span class="logo-text">Netra<span class="logo-highlight">X</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+    <button class="nav-cta" id="launchBtn">Launch Demo</button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🏆 Smart India Hackathon 2026</div>
+      <h1 class="hero-title">
+        <span class="hero-line1">Predict Disruptions.</span>
+        <span class="hero-line2">Optimize Routes.</span>
+        <span class="hero-line3">Deliver <span class="text-gradient">Hope</span> to Northeast India.</span>
+      </h1>
+      <p class="hero-subtitle">AI Platform with 72-Hour Predictive Disruption Forecasting — Landslides, Floods, Traffic & Cold-Chain Logistics</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="99.7">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Landslide Accuracy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="72">0</span><span class="stat-suffix">hr</span>
+          <span class="stat-label">Advance Prediction</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="91">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Route Efficiency</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="143">0</span><span class="stat-suffix">x</span>
+          <span class="stat-label">ROI Multiple</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#features" class="btn btn-primary">Explore Features</a>
+        <a href="#dashboard" class="btn btn-outline">Live Dashboard →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <span class="section-tag">Core Modules</span>
+      <h2>Powered by Advanced AI</h2>
+      <p>Six intelligent modules working together to predict, prevent, and optimize</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card" data-feature="landslide">
+        <div class="feature-icon" style="--icon-color: #ef4444;">🏔️</div>
+        <h3>Landslide Prediction</h3>
+        <p>CNN + LSTM ensemble model analyzing soil moisture, rainfall, slope angle & seismic data</p>
+        <div class="feature-metric">
+          <span class="metric-value">99.7%</span>
+          <span class="metric-label">accuracy</span>
+        </div>
+        <ul class="feature-details">
+          <li>72-hour advance warning</li>
+          <li>District-level granularity</li>
+          <li>Satellite + IoT sensor fusion</li>
+        </ul>
+        <button class="demo-btn" data-demo="landslide">Run Prediction →</button>
+      </div>
+
+      <div class="feature-card" data-feature="flood">
+        <div class="feature-icon" style="--icon-color: #3b82f6;">🌊</div>
+        <h3>Flood Risk Assessment</h3>
+        <p>Hydrological model combining river gauge data, precipitation forecasts & terrain analysis</p>
+        <div class="feature-metric">
+          <span class="metric-value">84%</span>
+          <span class="metric-label">precision</span>
+        </div>
+        <ul class="feature-details">
+          <li>48-hour flood warnings</li>
+          <li>River basin mapping</li>
+          <li>Evacuation route planning</li>
+        </ul>
+        <button class="demo-btn" data-demo="flood">Run Assessment →</button>
+      </div>
+
+      <div class="feature-card" data-feature="traffic">
+        <div class="feature-icon" style="--icon-color: #f59e0b;">🚦</div>
+        <h3>Traffic Forecast</h3>
+        <p>Graph Neural Network on road network topology with real‑time vehicle density feeds</p>
+        <div class="feature-metric">
+          <span class="metric-value">4-6h</span>
+          <span class="metric-label">ahead</span>
+        </div>
+        <ul class="feature-details">
+          <li>Congestion heatmaps</li>
+          <li>NH-37, NH-44 coverage</li>
+          <li>Event-aware predictions</li>
+        </ul>
+        <button class="demo-btn" data-demo="traffic">View Forecast →</button>
+      </div>
+
+      <div class="feature-card" data-feature="route">
+        <div class="feature-icon" style="--icon-color: #10b981;">🛣️</div>
+        <h3>Route Optimization</h3>
+        <p>Modified Dijkstra + Reinforcement Learning with multi‑constraint cost function</p>
+        <div class="feature-metric">
+          <span class="metric-value">0.47s</span>
+          <span class="metric-label">per route</span>
+        </div>
+        <ul class="feature-details">
+          <li>91% efficiency score</li>
+          <li>Multi-stop optimization</li>
+          <li>Real-time re-routing</li>
+        </ul>
+        <button class="demo-btn" data-demo="route">Calculate Route →</button>
+      </div>
+
+      <div class="feature-card" data-feature="coldchain">
+        <div class="feature-icon" style="--icon-color: #8b5cf6;">💊</div>
+        <h3>Cold-Chain Monitoring</h3>
+        <p>IoT temperature tracking with anomaly detection for medicine & vaccine delivery</p>
+        <div class="feature-metric">
+          <span class="metric-value">&lt;24h</span>
+          <span class="metric-label">delivery</span>
+        </div>
+        <ul class="feature-details">
+          <li>Real-time temp alerts</li>
+          <li>GPS + cold-box sensors</li>
+          <li>Compliance dashboard</li>
+        </ul>
+        <button class="demo-btn" data-demo="coldchain">Monitor Chain →</button>
+      </div>
+
+      <div class="feature-card" data-feature="offline">
+        <div class="feature-icon" style="--icon-color: #ec4899;">📡</div>
+        <h3>Offline Edge AI</h3>
+        <p>TensorFlow Lite models running on edge devices — works without internet connectivity</p>
+        <div class="feature-metric">
+          <span class="metric-value">100%</span>
+          <span class="metric-label">uptime</span>
+        </div>
+        <ul class="feature-details">
+          <li>On-device inference</li>
+          <li>Sync when connected</li>
+          <li>Low-power hardware</li>
+        </ul>
+        <button class="demo-btn" data-demo="offline">Test Offline →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== LIVE DASHBOARD ========== -->
+  <section class="dashboard-section" id="dashboard">
+    <div class="section-header">
+      <span class="section-tag">Live Dashboard</span>
+      <h2>Real-Time Operations Center</h2>
+      <p>Centralized monitoring of all active predictions and logistics</p>
+    </div>
+    <div class="dashboard-grid">
+
+      <div class="dash-card dash-map">
+        <div class="dash-card-header">
+          <h4>🗺️ Northeast India — Threat Map</h4>
+          <span class="dash-live-badge">● LIVE</span>
+        </div>
+        <div class="map-container" id="threatMap">
+          <div class="map-placeholder">
+            <div class="map-dot" style="top:20%;left:30%;" data-tooltip="Arunachal Pradesh — Landslide HIGH">
+              <span class="dot-pulse red"></span>
+            </div>
+            <div class="map-dot" style="top:45%;left:25%;" data-tooltip="Assam — Flood MODERATE">
+              <span class="dot-pulse yellow"></span>
+            </div>
+            <div class="map-dot" style="top:60%;left:50%;" data-tooltip="Meghalaya — Clear">
+              <span class="dot-pulse green"></span>
+            </div>
+            <div class="map-dot" style="top:35%;left:65%;" data-tooltip="Nagaland — Traffic CONGESTED">
+              <span class="dot-pulse yellow"></span>
+            </div>
+            <div class="map-dot" style="top:70%;left:40%;" data-tooltip="Tripura — Clear">
+              <span class="dot-pulse green"></span>
+            </div>
+            <div class="map-dot" style="top:50%;left:75%;" data-tooltip="Manipur — Landslide MODERATE">
+              <span class="dot-pulse orange"></span>
+            </div>
+            <svg class="map-outline" viewBox="0 0 400 300">
+              <path d="M60,40 L160,20 L280,30 L340,80 L360,150 L320,220 L240,260 L160,270 L80,240 L40,180 L50,100 Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <text x="170" y="150" fill="rgba(255,255,255,0.3)" font-size="14" font-family="Inter">Northeast India</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h4>⚠️ Active Alerts</h4>
+          <span class="alert-count">3</span>
+        </div>
+        <div class="alerts-list" id="alertsList">
+          <div class="alert-item critical">
+            <span class="alert-icon">🔴</span>
+            <div class="alert-info">
+              <strong>Landslide WARNING — Tawang District</strong>
+              <span>Risk: 94% | ETA: 18 hours | Soil saturation: 87%</span>
+            </div>
+            <span class="alert-time">2m ago</span>
+          </div>
+          <div class="alert-item warning">
+            <span class="alert-icon">🟡</span>
+            <div class="alert-info">
+              <strong>Flood WATCH — Brahmaputra Basin</strong>
+              <span>Risk: 67% | Water level: +2.3m above normal</span>
+            </div>
+            <span class="alert-time">15m ago</span>
+          </div>
+          <div class="alert-item info">
+            <span class="alert-icon">🟠</span>
+            <div class="alert-info">
+              <strong>Traffic ADVISORY — NH-37 Jorhat</strong>
+              <span>Congestion expected in 4 hours | Alt route available</span>
+            </div>
+            <span class="alert-time">1h ago</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h4>📦 Active Deliveries</h4>
+          <span class="dash-live-badge">● TRACKING</span>
+        </div>
+        <div class="delivery-list">
+          <div class="delivery-item">
+            <div class="delivery-status on-time">ON TIME</div>
+            <div class="delivery-info">
+              <strong>MED-2026-0847</strong>
+              <span>Vaccines → Tezpur District Hospital</span>
+              <div class="delivery-bar"><div class="delivery-progress" style="width:72%"></div></div>
+            </div>
+            <span class="delivery-eta">ETA 2.5h</span>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-status delayed">REROUTED</div>
+            <div class="delivery-info">
+              <strong>MED-2026-0851</strong>
+              <span>Insulin → Dimapur PHC</span>
+              <div class="delivery-bar"><div class="delivery-progress" style="width:45%"></div></div>
+            </div>
+            <span class="delivery-eta">ETA 4.1h</span>
+          </div>
+          <div class="delivery-item">
+            <div class="delivery-status on-time">ON TIME</div>
+            <div class="delivery-info">
+              <strong>SUP-2026-1204</strong>
+              <span>Emergency Supplies → Imphal</span>
+              <div class="delivery-bar"><div class="delivery-progress" style="width:91%"></div></div>
+            </div>
+            <span class="delivery-eta">ETA 0.8h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h4>🌡️ Cold-Chain Status</h4>
+        </div>
+        <div class="coldchain-grid">
+          <div class="cc-item ok">
+            <span class="cc-temp">2.4°C</span>
+            <span class="cc-label">Box A — ✅ Normal</span>
+          </div>
+          <div class="cc-item warning">
+            <span class="cc-temp">6.1°C</span>
+            <span class="cc-label">Box B — ⚠️ Elevated</span>
+          </div>
+          <div class="cc-item ok">
+            <span class="cc-temp">3.8°C</span>
+            <span class="cc-label">Box C — ✅ Normal</span>
+          </div>
+          <div class="cc-item ok">
+            <span class="cc-temp">1.9°C</span>
+            <span class="cc-label">Box D — ✅ Normal</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== IMPACT ========== -->
+  <section class="impact-section" id="impact">
+    <div class="section-header">
+      <span class="section-tag">Projected Impact</span>
+      <h2>Before vs After NetraX</h2>
+      <p>Transforming logistics and safety across 8 northeastern states</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-before">60%</div>
+        <div class="impact-arrow">→</div>
+        <div class="impact-after">95%</div>
+        <div class="impact-label">On-Time Delivery</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-before">±4-6h</div>
+        <div class="impact-arrow">→</div>
+        <div class="impact-after">±30min</div>
+        <div class="impact-label">Average Delay</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-before">5-7 days</div>
+        <div class="impact-arrow">→</div>
+        <div class="impact-after">&lt;24h</div>
+        <div class="impact-label">Medicine Delivery</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-before">Baseline</div>
+        <div class="impact-arrow">→</div>
+        <div class="impact-after">-30%</div>
+        <div class="impact-label">Delivery Cost</div>
+      </div>
+    </div>
+    <div class="economics-strip">
+      <div class="econ-item">
+        <span class="econ-value">₹70L</span>
+        <span class="econ-label">Investment</span>
+      </div>
+      <div class="econ-item">
+        <span class="econ-value">₹500Cr+</span>
+        <span class="econ-label">Annual Impact</span>
+      </div>
+      <div class="econ-item">
+        <span class="econ-value">2 months</span>
+        <span class="econ-label">Payback</span>
+      </div>
+      <div class="econ-item">
+        <span class="econ-value">143x</span>
+        <span class="econ-label">ROI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK ========== -->
+  <section class="tech-section" id="team">
+    <div class="section-header">
+      <span class="section-tag">Technology</span>
+      <h2>Built With</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-pill">Python</div>
+      <div class="tech-pill">TensorFlow</div>
+      <div class="tech-pill">PyTorch</div>
+      <div class="tech-pill">FastAPI</div>
+      <div class="tech-pill">PostgreSQL</div>
+      <div class="tech-pill">Redis</div>
+      <div class="tech-pill">Docker</div>
+      <div class="tech-pill">Kubernetes</div>
+      <div class="tech-pill">React</div>
+      <div class="tech-pill">Mapbox GL</div>
+      <div class="tech-pill">Apache Kafka</div>
+      <div class="tech-pill">TF Lite</div>
+    </div>
+    <div class="timeline-strip">
+      <h3>16-Week Delivery Timeline</h3>
+      <div class="timeline">
+        <div class="timeline-phase" style="--phase-width:25%;">
+          <span class="phase-bar phase-1"></span>
+          <span class="phase-label">Wk 1-4: Foundation</span>
+        </div>
+        <div class="timeline-phase" style="--phase-width:37.5%;">
+          <span class="phase-bar phase-2"></span>
+          <span class="phase-label">Wk 5-10: AI Models</span>
+        </div>
+        <div class="timeline-phase" style="--phase-width:25%;">
+          <span class="phase-bar phase-3"></span>
+          <span class="phase-label">Wk 11-14: Integration</span>
+        </div>
+        <div class="timeline-phase" style="--phase-width:12.5%;">
+          <span class="phase-bar phase-4"></span>
+          <span class="phase-label">Wk 15-16: Deploy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">◉</span> Netra<span class="logo-highlight">X</span>
+        <p>Predict disruptions. Optimize routes. Deliver hope.</p>
+      </div>
+      <div class="footer-links">
+        <p>Smart India Hackathon 2026 | Team NetraX</p>
+        <p>Aligned with NITI Aayog, Ministry of DoNER & UN SDGs</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NetraX — AI for Northeast India's Future</p>
+    </div>
+  </footer>
+
+  <!-- ========== DEMO MODAL ========== -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h3 id="modalTitle"></h3>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-primary modal-action" id="modalAction">Acknowledge</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
