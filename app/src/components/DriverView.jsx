@@ -156,7 +156,7 @@ export default function DriverView({ lang, setLang }) {
         <div className="driver-page" style={{ padding: "2rem", minHeight: "100vh", background: "var(--bg-dark)", color: "var(--text-primary)" }}>
 
             {/* LANGUAGE SELECTOR BAR */}
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap", gap: "1rem", marginBottom: "2rem" }}>
                 <span style={{ fontWeight: "800", color: "var(--text-muted)", textTransform: "uppercase", fontSize: "1.2rem", marginRight: "0.5rem" }}>Languages:</span>
                 <button onClick={() => setLang("en")} style={{ padding: "0.8rem 1.5rem", borderRadius: "50px", border: "2px solid", borderColor: lang === "en" ? "var(--cyan)" : "#cbd5e1", background: lang === "en" ? "var(--cyan)" : "#fff", color: lang === "en" ? "#fff" : "var(--text-primary)", fontWeight: "700", cursor: "pointer", transition: "all 0.2s" }}>A / English</button>
                 <button onClick={() => setLang("hi")} style={{ padding: "0.8rem 1.5rem", borderRadius: "50px", border: "2px solid", borderColor: lang === "hi" ? "var(--cyan)" : "#cbd5e1", background: lang === "hi" ? "var(--cyan)" : "#fff", color: lang === "hi" ? "#fff" : "var(--text-primary)", fontWeight: "700", cursor: "pointer", transition: "all 0.2s" }}>अ / Hindi</button>
@@ -281,7 +281,7 @@ export default function DriverView({ lang, setLang }) {
 
                     <div style={{ marginBottom: "2rem" }}>
                         <h4 style={{ marginBottom: "1rem", fontSize: "1.2rem", color: "var(--text-secondary)" }}>{t.expectedWeather}</h4>
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem" }}>
+                        <div className="weather-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem" }}>
                             {routeInfo.enroute_weather && routeInfo.enroute_weather.map((w, idx) => (
                                 <div key={idx} style={{ background: "var(--bg-dark)", padding: "1.2rem", borderRadius: "12px", border: "1px solid var(--border)", textAlign: "center" }}>
                                     <p style={{ fontSize: "0.85rem", fontWeight: "600", color: "var(--text-muted)", textTransform: "uppercase" }}>{w.point}</p>
