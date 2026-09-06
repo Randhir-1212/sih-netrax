@@ -99,9 +99,10 @@ const translations = {
 export default function DashboardView({ lang, setLang }) {
     const [data, setData] = useState(null);
     const t = translations[lang] || translations.en;
+    const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8085";
 
     useEffect(() => {
-        fetch("http://localhost:8085/api/dashboard")
+        fetch(`${BASE_URL}/api/dashboard`)
             .then((r) => r.json())
             .then(setData)
             .catch((e) => console.error("Error fetching dashboard data:", e));

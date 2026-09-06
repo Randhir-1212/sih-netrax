@@ -114,8 +114,10 @@ export default function DriverView({ lang, setLang }) {
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
 
+    const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8085";
+
     useEffect(() => {
-        fetch(`http://localhost:8085/api/driver/locations`)
+        fetch(`${BASE_URL}/api/driver/locations`)
             .then(r => r.json())
             .then(data => setLocations(data.locations))
             .catch(e => console.error(e));
@@ -135,7 +137,7 @@ export default function DriverView({ lang, setLang }) {
 
         setErrorMsg("");
         setLoading(true);
-        fetch(`http://localhost:8085/api/driver/route_preview?origin_id=${originId}&dest_id=${destId}`)
+        fetch(`${BASE_URL}/api/driver/route_preview?origin_id=${originId}&dest_id=${destId}`)
             .then(r => r.json())
             .then(data => {
                 if (data.error) {
