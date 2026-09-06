@@ -48,6 +48,10 @@ def generate_forecast(lat, lng):
         })
     return forecasts
 
+@app.get("/")
+async def root():
+    return {"status": "NetraX Core AI Backend is running", "version": "1.0"}
+
 @app.get("/api/dashboard")
 async def get_dashboard_data():
     weather = {"temperature": 27.5, "precipitation": 12.4, "humidity": 85, "soil_moisture": 0.42}
@@ -127,4 +131,5 @@ async def get_route_preview(origin_id: str, dest_id: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8085, reload=True)
+    import os
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8085)), reload=False)
